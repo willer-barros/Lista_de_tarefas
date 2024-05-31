@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Noticias</title>
+    <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+    <div class="tarefas">
+        <% if (tarefasList.length === 0){ %>
+            <p>Lista Vazia</p>
+        <% } else { %>
+            <% for(let i = 0; i < tarefasList.length; i++){ %>
+
+                <p><%= tarefasList[i] %> | <a href="/deletar/<%= i %>">X</a></p>
+            <% } %>
+        
+        <% } %>
+
+
+    </div>
+</body>
+</html>
